@@ -9,7 +9,7 @@ namespace DSLinkedList
             Console.WriteLine("Welcome to LinkedList Program");
             CustomLinkedList customLinkedList = new CustomLinkedList();
             Console.WriteLine("Please choose an option");
-            Console.WriteLine("\n1.Create simple linked list \n2.Add element at first position\n3.Linked list by Appending\n4.Ability to Insert element\n5.Delete first element");
+            Console.WriteLine("\n1.Create simple linked list \n2.Add element at first position\n3.Linked list by Appending\n4.Ability to Insert element\n5.Delete first element\n6.Delete last element");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -43,6 +43,15 @@ namespace DSLinkedList
                     customLinkedList.Insert(1,30);
                     customLinkedList.Display();
                     customLinkedList.DeleteFirst();
+                    customLinkedList.Display();
+                    break;
+               case 6:
+                    Console.WriteLine("Delete Last Element:");
+                    customLinkedList.Append(56);
+                    customLinkedList.Append(70);
+                    customLinkedList.Insert(1, 30);
+                    customLinkedList.Display();
+                    customLinkedList.DeleteLast();
                     customLinkedList.Display();
                     break;
             }

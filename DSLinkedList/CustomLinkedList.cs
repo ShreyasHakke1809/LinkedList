@@ -74,7 +74,21 @@ namespace DSLinkedList
                 Console.WriteLine("\nFirst element deleted");
             }
         }
-        
+        public void DeleteLast()
+        {
+            if (head != null && head.next != null)
+            {
+                Node newNode = head;
+                while (newNode.next.next != null)
+                {
+                    newNode = newNode.next;
+                }
+                newNode.next = null;
+                Console.WriteLine("\nLast element deleted");
+            }
+            else
+                Console.WriteLine("\nLinkedlist is either empty or contains only one element");
+        }
         public void Display()
         {
             Console.WriteLine("Displaying Nodes:");
