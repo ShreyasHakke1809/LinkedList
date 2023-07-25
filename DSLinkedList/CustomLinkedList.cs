@@ -66,6 +66,15 @@ namespace DSLinkedList
                 temp.next = newNode;
             }
         }
+        public void DeleteFirst()
+        {
+            if (head != null)
+            {
+                head = head.next;
+                Console.WriteLine("\nFirst element deleted");
+            }
+        }
+        
         public void Display()
         {
             Console.WriteLine("Displaying Nodes:");
