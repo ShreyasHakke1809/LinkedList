@@ -66,6 +66,16 @@
                     customLinkedList.InsertAfter(30, 40);
                     customLinkedList.Display();
                     break;
+                case 9:
+
+                    customLinkedList.Append(56);
+                    customLinkedList.Append(30);
+                    customLinkedList.Append(70);
+                    customLinkedList.InsertAfter(30, 40);
+                    customLinkedList.Display();
+                    customLinkedList.DeleteParticularElement(40);
+                    customLinkedList.Display();
+                    break;
             }
         }
     }
