@@ -3,6 +3,27 @@
     internal class CustomLinkedList
     {
         public Node head;
+
+        public void OrderedLinkedlist(int data)
+        {
+            Node newNode = new Node(data);
+            Node currentNode = this.head, temp = null;
+            while (currentNode != null && currentNode.data < newNode.data)
+            {
+                temp = currentNode;
+                currentNode = currentNode.next;
+            }
+            if (temp == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                temp.next = newNode;
+            }
+            newNode.next = currentNode;
+            Console.WriteLine("{0} is inserted into ordered Linkedlist", newNode.data);
+        }
         public void AddLast(int data)
         {
             Node newNode = new Node(data);

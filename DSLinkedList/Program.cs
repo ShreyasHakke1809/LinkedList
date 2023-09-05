@@ -76,6 +76,16 @@
                     customLinkedList.DeleteParticularElement(40);
                     customLinkedList.Display();
                     break;
+                case 10:
+                    customLinkedList.OrderedLinkedlist(56);
+                    customLinkedList.OrderedLinkedlist(30);
+                    customLinkedList.OrderedLinkedlist(40);
+                    customLinkedList.OrderedLinkedlist(70);
+                    customLinkedList.Display();
+                    break;
+                default:
+                    Console.WriteLine("Please choose the correct option");
+                    break;
             }
         }
     }
