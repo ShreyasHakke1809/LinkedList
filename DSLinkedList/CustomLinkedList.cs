@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSLinkedList
+﻿namespace DSLinkedList
 {
     internal class CustomLinkedList
     {
@@ -42,7 +36,7 @@ namespace DSLinkedList
         }
         public void Append(int data)
         {
-            AddLast(data);             
+            AddLast(data);
         }
         public void Insert(int index, int data)
         {
@@ -88,6 +82,35 @@ namespace DSLinkedList
             }
             else
                 Console.WriteLine("\nLinkedlist is either empty or contains only one element");
+        }
+        public int FindPosition(int value)
+        {
+            Node temp = head;
+            int index = 0;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    return index;
+                }
+                temp = temp.next;
+                index++;
+            }
+            return -1;
+        }
+
+        public void InsertAfter(int value, int data)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    int position = FindPosition(value);
+                    Insert(position + 1, data);
+                }
+                temp = temp.next;
+            }
         }
         public void SearchVaue(int data)
         {
